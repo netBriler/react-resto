@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Error from '../error';
 
 export default class ErrorBoundry extends Component {
@@ -8,12 +8,12 @@ export default class ErrorBoundry extends Component {
     }
 
     componentDidCatch() {
-        this.setState({ error: true });
+        this.setState({error: true})
     }
 
     render() {
-        if (this.state.error) {
-            return <Error />
+        if(this.state.error) {
+            return <Error/>
         }
 
         return this.props.children;
